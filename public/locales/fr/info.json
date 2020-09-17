@@ -1,0 +1,8 @@
+{
+  "author": {
+    "firstname": "Jeanne",
+    "lastname": "Dupont",
+    "age": "{{count}} an",
+    "age_plural": "{{count}} ans"
+  }
+}
