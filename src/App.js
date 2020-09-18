@@ -43,6 +43,13 @@ class Welcome extends React.Component {
 
   render() {
     const { t } = this.props;
+    //testing Multiple fallback keys. Change for another code error to test.
+    const error = '404';
+    //testing interpolation with models
+    const author = { name: 'Victor Hugo', country: 'France' };
+    //testing Objects and Arrays
+    const obj = t('tree', { returnObjects: true, what: 'i18n' });
+
     return (
       <div className='App'>
         <div className='App-header'>
@@ -61,11 +68,33 @@ class Welcome extends React.Component {
         <Translation ns='translation'>
           {(t, { i18n }) => <div>{t('description.part2')}</div>}
         </Translation>
+        {/* PLURALS can be used: with variable name 'count' and adding '_plural' to the key in translations files */}
         <div>
           {[1, 2, 3].map((a, i) => (
             <div key={i}>{t('info:author.age', { count: a })}</div>
           ))}
         </div>
+        {/* We can pass default value for cases the key could not be found in translations */}
+        {/*  <div>{t('notExistingKey', 'This is a default value set in App.')}</div> */}
+        {/* Multiple fallback keys: calling t with an array of keys */}
+        <div>
+          Error code test:{' '}
+          {t([`fallbackKeyError.${error}`, 'fallbackKeyError.unspecific'])}
+        </div>
+        {/* INTERPOLATION can be basic or done with models*/}
+        <div>{t('info:like', { author, what: 'i18next' })}</div>
+        {/* FORMATTING 
+        we can add formatting using moment.js, numeral.js or the intl api (see in i18n.js for config)
+        */}
+        <div>{t('info:date', { date: new Date() })}</div>
+        {/* NESTING, allows us to reference keyx in a translation (see in translation) */}
+        <div>{t('statement')}</div>
+        {/* CONTEXT, allows us to reference keyx in a translation (see in translation) */}
+        <div>{t('info:friend', { context: 'female', count: 3 })}</div>
+        {/* OBJECTS and ARRAYS, can return them */}
+        <div>{t('array', { returnObjects: true })}</div>
+        <div>{t('array', { joinArrays: '/' })}</div>
+        <div>{obj.res}</div>
       </div>
     );
   }
