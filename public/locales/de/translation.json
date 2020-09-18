@@ -1,7 +1,16 @@
 {
-  "title": "Willkommen zu react und react-i18next",
+  "array": ["a", "b", "c"],
   "description": {
     "part1": "Um loszulegen, ändere <1>src/App(DE).js</1> und speichere um neuzuladen.",
     "part2": "Wechsle die Sprache zwischen deutsch, französisch und englisch mit Hilfe der beiden Schalter."
+  },
+  "fallbackKeyError": {
+    "404": "Die Seite wurde nicht gefunden",
+    "unspecific": "Etwas ist schief gelaufen"
+  },
+  "statement": "Sie befinden sich auf der Seite von Erika",
+  "title": "Willkommen zu react und react-i18next",
+  "tree": {
+    "res": "{{what}} oder {{what}} hinzugefügt"
   }
 }

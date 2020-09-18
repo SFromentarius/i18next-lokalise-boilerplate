@@ -1,0 +1,16 @@
+{
+  "author": {
+    "firstname": "Erika",
+    "lastname": "Mustermann",
+    "age": "{{count}} Jahr alt",
+    "age_plural": "{{count}} Jahre alt"
+  },
+  "like": "Ich lese gerne Bücher von {{author.name}}, und {{what}} entdecken.",
+  "date": "Das heutige Datum ist der {{date, LL}}.",
+  "text": "{{text.uppercase}} ist in Großbuchstaben.",
+  "friend": "Ein Freund",
+  "friend_male": "Ein Freund",
+  "friend_female": "Eine Freundin",
+  "friend_male_plural": "{{count}} Freunde",
+  "friend_female_plural": "{{count}} Freundinnen"
+}

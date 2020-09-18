@@ -1,0 +1,16 @@
+{
+  "title": "Welcome to react using react-i18next",
+  "description": {
+    "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
+    "part2": "Switch language between english, deutsch and french using buttons above."
+  },
+  "fallbackKeyError": {
+    "unspecific": "Something went wrong",
+    "404": "The page was not found"
+  },
+  "statement": "You're on the page of $t(info:author.firstname).",
+  "tree": {
+    "res": "added {{what}}"
+  },
+  "array": ["a", "b", "c"]
+}

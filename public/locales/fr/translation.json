@@ -1,7 +1,16 @@
 {
-  "title": "Bienvenue à react et react-i18next",
+  "array": ["a", "b", "c"],
   "description": {
-    "part1": "Pour commencer, changez <1>src/App.js</1> et sauvegardez.",
-    "part2": "Changez la langue entre le français, l'allemand et l'anglais en utilisant les deux boutons."
+    "part1": "Pour commencer, éditez <1>src/App.js</1> et sauvegardez pour recharger.",
+    "part2": "Passez d'une langue à l'autre en utilisant les boutons ci-dessus."
+  },
+  "fallbackKeyError": {
+    "404": "La page n'a pas été trouvée",
+    "unspecific": "Un problème est survenu"
+  },
+  "statement": "Vous êtes sur la page de Jeanne",
+  "title": "Bienvenue à react et react-i18next",
+  "tree": {
+    "res": "{{what}} ou {{what}} ajouté"
   }
 }
